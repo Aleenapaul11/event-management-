@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now - Ticket Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center" style="background-image: url('https://img.freepik.com/free-vector/silhouette-party-crowd-glowing-lights-background_1048-8423.jpg?semt=ais_hybrid');">
+
+  <!-- Overlay to darken the background -->
+  <div class="min-h-screen bg-black bg-opacity-60 flex items-center justify-center">
+
+    <!-- Booking Form Container -->
+    <div class="bg-black bg-opacity-40 backdrop-blur-lg p-8 rounded-lg shadow-lg max-w-lg w-full">
+
+      <!-- Form Heading -->
+      <h2 class="text-3xl font-bold text-center text-white mb-6">Book Your Ticket</h2>
+
+      <!-- Booking Form -->
+      <form class="space-y-6">
+
+        <!-- Full Name Input -->
+        <div>
+          <label for="name" class="block text-white text-sm font-medium">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name" 
+                 class="w-full p-3 mt-2 text-black rounded-lg bg-opacity-70 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Email Input -->
+        <div>
+          <label for="email" class="block text-white text-sm font-medium">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email"
+                 class="w-full p-3 mt-2 text-black rounded-lg bg-opacity-70 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Event Date Input -->
+        <div>
+          <label for="event_date" class="block text-white text-sm font-medium">Event Date</label>
+          <input type="date" id="event_date" name="event_date" required 
+                 class="w-full p-3 mt-2 text-black rounded-lg bg-opacity-70 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Ticket Type Dropdown -->
+        <div>
+          <label for="ticket_type" class="block text-white text-sm font-medium">Ticket Type</label>
+          <select id="ticket_type" name="ticket_type" required
+                  class="w-full p-3 mt-2 text-black rounded-lg bg-opacity-70 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select Ticket Type</option>
+            <option value="VIP">VIP</option>
+            <option value="General">General</option>
+            <option value="Student">Student</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" 
+                  class="w-full p-3 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            Book Now
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <hr>
+
+
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <!-- Event Information Section -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Event Information</h3>
+                <p class="text-sm">Join us for an unforgettable night of live music, food, and fun! The event starts at 7:00 PM and ends at midnight.</p>
+                <ul class="mt-4 space-y-2">
+                    <li><strong>Date:</strong> January 25, 2024</li>
+                    <li><strong>Location:</strong> Music Arena, City Center</li>
+                    <li><strong>Time:</strong> 7:00 PM - Midnight</li>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <!-- Contact Section -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <ul class="space-y-2">
+                    <li><strong>Email:</strong> contact@musicevent.com</li>
+                    <li><strong>Phone:</strong> +9445960</li>
+                    <li><strong>Website:</strong> <a href="https://musicevent.com" class="text-blue-400 hover:text-blue-500">musicevent.com</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="mt-12 text-center border-t border-gray-600 pt-6">
+            <p class="text-sm">© 2024 Music Event. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
