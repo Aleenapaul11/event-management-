@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Events</title>
+   
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <style>
         
         .bg-cover {
@@ -101,15 +102,15 @@
           
             <ul class="flex " id="navul">
                 <li><a href="#home" class="hover:text-red-500">Home</a></li>
-                <li><a href="./about.html" class="hover:text-red-500">About</a></li>
-                <li><a href="./artist.html" class="hover:text-red-500">Artists</a></li>
-                <li><a href="./schedule.html" class="hover:text-red-500">Schedule</a></li>
-                <li><a href="./contact.html" class="hover:text-red-500">Contact</a></li>
+                <li><a href="#about" class="hover:text-red-500">About</a></li>
+                <li><a href="#artists" class="hover:text-red-500">Artists</a></li>
+                <li><a href="#schedule" class="hover:text-red-500">Schedule</a></li>
+                <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="bg-cover text-white text-center py-24 relative" id="home">
+    <header class="bg-cover text-white text-center py-24 relative">
         <div class="overlay"></div>
         <h6 class="text-2xl font-semibold tracking-wider uppercase z-10 relative">
             EVENT NIGHTS
@@ -129,7 +130,7 @@
 
    
     <section class="py-10 text-center bg-[#131c34]">
-        <a href="./booknow.html" class="bg-red-600 text-white text-xl font-bold py-4 px-8 rounded-full hover:bg-red-700 transition duration-300">BOOK TICKETS</a>
+        <a href="#book" class="bg-red-600 text-white text-xl font-bold py-4 px-8 rounded-full hover:bg-red-700 transition duration-300">BOOK TICKETS</a>
     </section>
 
    
@@ -143,99 +144,5 @@
         </div>
     </section>
 
-
-  <!-- Gallery -->
-
-<div class="bg-[#1e3a8a]">
-
-    <!-- Header Section -->
-    <section class="text-center py-16">
-        <h1 id="home" class="text-5xl font-bold text-white glass p-6 w-1/2 mx-auto">Event Gallery</h1>
-    </section>
-
-    <!-- Event Gallery Section -->
-    <section class="px-4 py-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Image 1 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://live.staticflickr.com/4186/33724410974_6a6391c460_b.jpg" alt="Artist - Vinneth" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 2 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://blackhattalent.com/wp-content/uploads/2023/03/Sunidhi-Chauhan-at-an-event-for-HDFC-Bank-in-Goa1-scaled-e1695719774230.jpg" alt="Sunidhi Chauhan Event" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 3 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://engage4more.com/blog/wp-content/uploads/2022/07/Arijit-Singh-1.jpg" alt="Arijit Singh Concert" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 4 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://www.hire4event.com/blogs/wp-content/uploads/2022/05/abstral-official-TGmo7a2UbmA-unsplash-scaled.jpg" alt="Event Stage" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 5 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://images.picxy.com/cache/2020/2/5/fa335ae2f3447e37ec604fc539231380.jpg" alt="Event Lighting" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 6 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00412578-newkacfttc-portrait.jpg" alt="Singing Show Event" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 7 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://images.picxy.com/cache/2020/2/5/0abcba52207a13e0c36cb405fa7e3422.jpg" alt="Event Decoration" class="w-full h-full object-cover">
-            </div>
-            <!-- Image 8 -->
-            <div class="rounded-lg overflow-hidden border-4 border-white">
-                <img src="https://www.eventfaqs.com/Uploads2018/00Uploads%202024/Oct24/1728033792200.jpeg" alt="Music Concert" class="w-full h-full object-cover">
-            </div>
-        </div>
-    </div>
-    </section>
-
-
-<!-- Footer -->
-
-
-<footer class="bg-dark-blue text-white py-12 px-6">
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-        <!-- Event Information Section -->
-        <div>
-            <h3 class="text-lg font-semibold mb-4">Event Information</h3>
-            <p class="text-sm">Join us for an unforgettable night of live music, food, and fun! The event starts at 7:00 PM and ends at midnight.</p>
-            <ul class="mt-4 space-y-2">
-                <li><strong>Date:</strong> January 25, 2024</li>
-                <li><strong>Location:</strong> Music Arena, City Center</li>
-                <li><strong>Time:</strong> 7:00 PM - Midnight</li>
-            </ul>
-        </div>
-
-        <!-- Social Media Section -->
-        <div>
-            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-            <div class="flex space-x-4">
-                <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-2xl hover:text-gray-400"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div>
-            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul class="space-y-2">
-                <li><strong>Email:</strong> contact@musicevent.com</li>
-                <li><strong>Phone:</strong> +9445960</li>
-                <li><strong>Website:</strong> <a href="https://musicevent.com" class="text-blue-400 hover:text-blue-500">musicevent.com</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Footer Bottom Section -->
-    <div class="mt-12 text-center border-t border-gray-600 pt-6">
-        <p class="text-sm">© 2024 Music Event. All rights reserved.</p>
-    </div>
-</footer>
-
-</div>
+</body>
 </html>

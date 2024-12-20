@@ -9,14 +9,14 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Slideshow Fade Animation */
-    .fade {
+     /* Slideshow Fade Animation */
+     .fade {
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
       position: absolute;
       width: 100%;
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: bold;
       color: black;
     }
@@ -30,145 +30,238 @@
       width: 100%;
       height: 100px;
     }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .slideshow-container {
+        height: 150px;
+      }
+
+      .text-4xl {
+        font-size: 1.875rem;
+      }
+
+      .text-lg {
+        font-size: 1rem;
+      }
+
+      iframe {
+        height: 200px;
+      }
+
+      button, a {
+        font-size: 0.875rem;
+      }
+    }
+
+
+    li{
+            margin-right: 35px;
+        }
+
+       
+        .custom-blue-bg {
+            background-color: #131c34; 
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        #menubar{
+            display: none;
+        }
+        #menubar:hover{
+            color: red;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width:613px){
+            #navul{
+                position: absolute;
+                top: 70px;
+                z-index: 400;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                background-color: #131c34;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px ;
+                padding-bottom: 10px;
+                display: none;
+
+            }
+          
+        #menubar{
+            display: block;
+            padding-right: 10px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        #menubar:hover{
+            color: red;
+        }
+        #check:checked~ #navul{
+            display: flex;
+        }
+
+        }
   </style>
   <!-- Font Awesome for Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-black text-gray-900">
 
-  <!-- Contact Us Section -->
-  <section id="contact-us" class="py-12 bg-cover bg-center"
-    style="background-image: url('https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?cs=srgb&dl=pexels-sebastian-ervi-866902-1763075.jpg&fm=jpg');">
+<body class="bg-blue-500 font-sans">
+
     
-    <!-- Slideshow Section -->
-    <div class="container mx-auto px-6 lg:px-16 mb-4">
-      <div class="slideshow-container">
-        <div id="slideshow" class="flex justify-center items-center">
-          <div class="fade active">𝙒𝙚 𝘾𝙧𝙚𝙖𝙩𝙚 𝙐𝙣𝙛𝙤𝙧𝙜𝙚𝙩𝙩𝙖𝙗𝙡𝙚 𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚𝙨!</div>
-          <div class="fade">𝙔𝙤𝙪𝙧 𝙑𝙞𝙨𝙞𝙤𝙣, 𝙊𝙪𝙧 𝙀𝙭𝙥𝙚𝙧𝙩𝙞𝙨𝙚.</div>
-          <div class="fade">𝙇𝙚𝙩 𝙐𝙨 𝙋𝙡𝙖𝙣 𝙔𝙤𝙪𝙧 𝙋𝙚𝙧𝙛𝙚𝙘𝙩 𝙀𝙫𝙚𝙣𝙩.</div>
-          <div class="fade">𝙏𝙪𝙧𝙣𝙞𝙣𝙜 𝙈𝙤𝙢𝙚𝙣𝙩𝙨 𝙄𝙣𝙩𝙤 𝙈𝙚𝙢𝙤𝙧𝙞𝙚𝙨.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Get in Touch Section -->
-    <div class="container mx-auto px-6 lg:px-16 mb-4">
-      <div class="bg-white shadow-lg rounded-lg p-8 bg-cover bg-center max-w-4xl mx-auto"
-        style="background-image: url('https://c1.wallpaperflare.com/preview/821/708/974/concert-photos-germany-gr%C3%A4fenhainichen.jpg');">
+  <nav class="bg-gray-900 text-white py-4 w-full z-50" >
+      <div class="flex items-center  " id="navbar">
+          <span>
+          <a href="#home" class="text-white text-2xl font-bold ">
+             
+              <img src="data:image/jpeg;base64,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" alt="Logo" class="h-10 w-auto pl-3">
+          </a>
+      </span>
+          <input type="checkbox" id="check">
+          <label for="check" class="icons">
+          <!-- menu icon -->
+          <i id="menubar" class="fa-solid fa-bars"></i>
+          </label>
         
-        <h2 class="text-4xl font-bold text-blue-500 mb-6">Get in Touch</h2>
-        <p class="text-gray-200 mb-10 text-lg">
-          𝙒𝙚'𝙙 𝙡𝙤𝙫𝙚 𝙩𝙤 𝙝𝙚𝙖𝙧 𝙛𝙧𝙤𝙢 𝙮𝙤𝙪! 𝙁𝙞𝙡𝙡 𝙤𝙪𝙩 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢 𝙗𝙚𝙡𝙤𝙬 𝙖𝙣𝙙 𝙡𝙚𝙩'𝙨
-          𝙢𝙖𝙠𝙚 𝙮𝙤𝙪𝙧 𝙣𝙚𝙭𝙩 𝙚𝙫𝙚𝙣𝙩 𝙪𝙣𝙛𝙤𝙧𝙜𝙚𝙩𝙩𝙖𝙗𝙡𝙚.
-        </p>
-        <form>
-          <div class="mb-6">
-            <label for="name" class="block text-sm font-medium text-blue-700 mb-2">Your Name</label>
-            <input type="text" id="name"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
-              placeholder="Enter your name" required />
-          </div>
-          <div class="mb-6">
-            <label for="email" class="block text-sm font-medium text-blue-700 mb-2">Your Email</label>
-            <input type="email" id="email"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
-              placeholder="Enter your email" required />
-          </div>
-          <div class="mb-6">
-            <label for="phone" class="block text-sm font-medium text-blue-700 mb-2">Your Contact Number</label>
-            <input type="tel" id="phone"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
-              placeholder="Enter your contact number" required />
-          </div>
-          <div class="mb-6">
-            <label for="message" class="block text-sm font-medium text-blue-700 mb-2">Your Message</label>
-            <textarea id="message"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
-              rows="5" placeholder="Write your message" required></textarea>
-          </div>
-          <button type="submit"
-            class="w-full bg-gradient-to-r from-blue-500 to-blue-500 text-white py-3 rounded-lg text-lg font-medium hover:from-red-500 hover:to-red-800 transition duration-300">
-            Send Message
-          </button>
-        </form>
+          <ul class="flex " id="navul">
+              <li><a href="./index.html" class="hover:text-red-500">Home</a></li>
+              <li><a href="./about.html" class="hover:text-red-500">About</a></li>
+              <li><a href="./artist.html" class="hover:text-red-500">Artists</a></li>
+              <li><a href="./schedule.html" class="hover:text-red-500">Schedule</a></li>
+              <li><a href="./contact.html" class="hover:text-red-500">Contact</a></li>
+          </ul>
+      </div>
+  </nav>
 
-        <!-- Call Us Now Button and Quick Links -->
-        <div class="mt-6 flex items-center justify-between">
-          <!-- Call Us Button -->
-          <a href="tel:+919876543210"
-            class="bg-blue-500 text-white py-2 px-4 rounded-lg text-sm hover:bg-red-500 transition duration-300">
-            Call Us
-          </a>
 
-          <!-- Quick Links Section -->
-          <div>
-            <h3 class="text-sm font-bold text-red-400">Quick Links</h3>
-            <ul class="space-y-1 text-blue-800 underline">
-              <li><a href="/privacy" class="text-gray-200 hover:text-blue-500 transition duration-200">Privacy Policy</a></li>
-            </ul>
+  <body class="bg-black text-gray-900">
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="py-12 bg-cover bg-center"
+      style="background-image: url('https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg');">
+      
+      <!-- Slideshow Section -->
+      <div class="container mx-auto px-6 lg:px-16 mb-4">
+        <div class="slideshow-container">
+          <div id="slideshow" class="flex justify-center items-center">
+            <div class="fade">𝙔𝙤𝙪𝙧 𝙑𝙞𝙨𝙞𝙤𝙣, 𝙊𝙪𝙧 𝙀𝙭𝙥𝙚𝙧𝙩𝙞𝙨𝙚.</div>
+            <div class="fade">𝙇𝙚𝙩 𝙐𝙨 𝙋𝙡𝙖𝙣 𝙔𝙤𝙪𝙧 𝙋𝙚𝙧𝙛𝙚𝙘𝙩 𝙀𝙫𝙚𝙣𝙩.</div>
+            <div class="fade">𝙏𝙪𝙧𝙣𝙞𝙣𝙜 𝙈𝙤𝙢𝙚𝙣𝙩𝙨 𝙄𝙣𝙩𝙤 𝙈𝙚𝙢𝙤𝙧𝙞𝙚𝙨.</div>
           </div>
-        </div>
-
-        <!-- Business Hours Section -->
-        <div class="mt-6">
-          <p class="text-yellow-500 ">𝙁𝙚𝙚𝙡 𝙛𝙧𝙚𝙚 𝙩𝙤 𝙨𝙩𝙤𝙥 𝙗𝙮 𝙙𝙪𝙧𝙞𝙣𝙜 𝙤𝙪𝙧 𝙗𝙪𝙨𝙞𝙣𝙚𝙨𝙨 𝙝𝙤𝙪𝙧𝙨 𝙛𝙤𝙧 𝙖 𝙛𝙖𝙘𝙚-𝙩𝙤-𝙛𝙖𝙘𝙚 𝙘𝙤𝙣𝙨𝙪𝙡𝙩𝙖𝙩𝙞𝙤𝙣.</p>
-          <h3 class="text-lg font-bold text-green-500">Business Hours</h3>
-          <p class="text-gray-200">Monday - Friday: 9:00 AM - 6:00 PM</p>
-          <p class="text-gray-200">Saturday - Sunday: 10:00 AM - 4:00 PM</p>
-        </div>
-
-        <!-- Social Media Links -->
-        <div class="mt-6 flex space-x-6 justify-center">
-          <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800">
-            <i class="fab fa-facebook-f text-3xl"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600">
-            <i class="fab fa-twitter text-3xl"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700">
-            <i class="fab fa-instagram text-3xl"></i>
-          </a>
         </div>
       </div>
-    </div>
-
-    <!-- Full-Size Map -->
-    <div class="bg-black shadow-lg rounded-lg overflow-hidden">
-      <!-- Heading for Our Location -->
-      <h2 class="text-3xl font-bold text-blue-800 p-6">Our Location</h2>
-
-      <!-- Map Container -->
-      <div class="w-full h-80">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.0178969983564!2d76.326271!3d10.015882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c653aa1f52d%3A0xfb81a50ef3f6d5f8!2sZudio%20Kakkanad!5e0!3m2!1sen!2sin!4v1700201010101!5m2!1sen!2sin"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-          class="rounded-lg"></iframe>
+  
+      <!-- Get in Touch Section -->
+      <div class="container mx-auto px-6 lg:px-16 mb-4">
+        <div class="bg-white shadow-lg rounded-lg p-8 bg-cover bg-center max-w-4xl mx-auto"
+          style="background-image: url('https://c1.wallpaperflare.com/preview/821/708/974/concert-photos-germany-gr%C3%A4fenhainichen.jpg');">
+          
+          <h2 class="text-4xl font-bold text-blue-500 mb-6">Get in Touch</h2>
+          <p class="text-gray-200 mb-10 text-lg">
+            𝙒𝙚'𝙙 𝙡𝙤𝙫𝙚 𝙩𝙤 𝙝𝙚𝙖𝙧 𝙛𝙧𝙤𝙢 𝙮𝙤𝙪! 𝙁𝙞𝙡𝙡 𝙤𝙪𝙩 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢 𝙗𝙚𝙡𝙤𝙬 𝙖𝙣𝙙 𝙡𝙚𝙩'𝙨
+            𝙢𝙖𝙠𝙚 𝙮𝙤𝙪𝙧 𝙣𝙚𝙭𝙩 𝙚𝙫𝙚𝙣𝙩 𝙪𝙣𝙛𝙤𝙧𝙜𝙚𝙩𝙩𝙖𝙗𝙡𝙚.
+          </p>
+          <form>
+            <div class="mb-6">
+              <label for="name" class="block text-sm font-medium text-blue-700 mb-2">Your Name</label>
+              <input type="text" id="name"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
+                placeholder="Enter your name" required />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block text-sm font-medium text-blue-700 mb-2">Your Email</label>
+              <input type="email" id="email"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
+                placeholder="Enter your email" required />
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="block text-sm font-medium text-blue-700 mb-2">Your Contact Number</label>
+              <input type="tel" id="phone"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
+                placeholder="Enter your contact number" required />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-sm font-medium text-blue-700 mb-2">Your Message</label>
+              <textarea id="message"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 bg-white bg-opacity-30"
+                rows="5" placeholder="Write your message" required></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-blue-500 to-blue-500 text-white py-3 rounded-lg text-lg font-medium hover:from-red-500 hover:to-red-800 transition duration-300">
+              Send Message
+            </button>
+          </form>
+  
+          <div class="mt-6 flex items-center justify-between">
+            <a href="tel:+919876543210"
+              class="bg-blue-500 text-white py-2 px-4 rounded-lg text-sm hover:bg-red-500 transition duration-300">
+              Call Us
+            </a>
+  
+            <div>
+              <h3 class="text-sm font-bold text-red-400">Quick Links</h3>
+              <ul class="space-y-1 text-blue-800 underline">
+                <li><a href="/privacy" class="text-gray-200 hover:text-blue-500 transition duration-200">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="mt-6">
+            <p class="text-yellow-500 ">𝙁𝙚𝙚𝙡 𝙛𝙧𝙚𝙚 𝙩𝙤 𝙨𝙩𝙤𝙥 𝙗𝙮 𝙙𝙪𝙧𝙞𝙣𝙜 𝙤𝙪𝙧 𝙗𝙪𝙨𝙞𝙣𝙚𝙨𝙨 𝙝𝙤𝙪𝙧𝙨.</p>
+            <h3 class="text-lg font-bold text-green-500">Business Hours</h3>
+            <p class="text-gray-200">Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p class="text-gray-200">Saturday - Sunday: 10:00 AM - 4:00 PM</p>
+          </div>
+  
+          <div class="mt-6 flex space-x-6 justify-center">
+            <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800">
+              <i class="fab fa-facebook-f text-3xl"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600">
+              <i class="fab fa-twitter text-3xl"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700">
+              <i class="fab fa-instagram text-3xl"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </section>
-
-  <script>
-    const slides = document.querySelectorAll("#slideshow .fade");
-    let currentSlide = 0;
-
-    function showSlide() {
-      slides.forEach((slide, index) => {
-        slide.classList.remove("active");
-        if (index === currentSlide) {
-          slide.classList.add("active");
-        }
-      });
-      currentSlide = (currentSlide + 1) % slides.length;
-    }
-
-    setInterval(showSlide, 3000);
-    showSlide(); 
-  </script>
-
-
+  
+      <div class="bg-black shadow-lg rounded-lg overflow-hidden">
+        <h2 class="text-3xl font-bold text-blue-800 p-6">Our Location</h2>
+        <div class="w-full h-80">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.0178969983564!2d76.326271!3d10.015882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c653aa1f52d%3A0xfb81a50ef3f6d5f8!2sZudio%20Kakkanad!5e0!3m2!1sen!2sin!4v1700201010101!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            class="rounded-lg"></iframe>
+        </div>
+      </div>
+    </section>
+  
+    <script>
+      const slides = document.querySelectorAll("#slideshow .fade");
+      let currentSlide = 0;
+  
+      function showSlide() {
+        slides.forEach((slide, index) => {
+          slide.classList.remove("active");
+          if (index === currentSlide) {
+            slide.classList.add("active");
+          }
+        });
+        currentSlide = (currentSlide + 1) % slides.length;
+      }
+  
+      setInterval(showSlide, 3000);
+      showSlide(); 
+    </script>
 <hr>
 
 

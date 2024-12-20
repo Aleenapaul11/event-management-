@@ -30,3 +30,57 @@ button:hover {
   color: black; /* Changes text color on hover */
   transform: scale(1.05); /* Slightly increases size on hover */
 }
+
+
+li{
+  margin-right: 35px;
+}
+
+
+.custom-blue-bg {
+  background-color: #131c34; 
+}
+#navbar{
+  display: flex;
+  justify-content: space-between;
+}
+#menubar{
+  display: none;
+}
+#menubar:hover{
+  color: red;
+}
+#check{
+  display: none;
+}
+@media (max-width:613px){
+  #navul{
+      position: absolute;
+      top: 70px;
+      z-index: 400;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      background-color: #131c34;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px ;
+      padding-bottom: 10px;
+      display: none;
+
+  }
+
+#menubar{
+  display: block;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+#menubar:hover{
+  color: red;
+}
+#check:checked~ #navul{
+  display: flex;
+}
+
+}

@@ -9,16 +9,101 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
 
-<body class="bg-sky-950">
+li{
+            margin-right: 35px;
+        }
+
+       
+        .custom-blue-bg {
+            background-color: #131c34; 
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        #menubar{
+            display: none;
+        }
+        #menubar:hover{
+            color: red;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width:613px){
+            #navul{
+                position: absolute;
+                top: 70px;
+                z-index: 400;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                background-color: #131c34;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px ;
+                padding-bottom: 10px;
+                display: none;
+
+            }
+          
+        #menubar{
+            display: block;
+            padding-right: 10px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        #menubar:hover{
+            color: red;
+        }
+        #check:checked~ #navul{
+            display: flex;
+        }
+
+        }
+</style>
+
+
+
+
+<body class="bg-blue-500 font-sans">
+
+    
+    <nav class="bg-gray-900 text-white py-4 w-full z-50" >
+        <div class="flex items-center  " id="navbar">
+            <span>
+            <a href="#home" class="text-white text-2xl font-bold ">
+               
+                <img src="data:image/jpeg;base64,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" alt="Logo" class="h-10 w-auto pl-3">
+            </a>
+        </span>
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+            <!-- menu icon -->
+            <i id="menubar" class="fa-solid fa-bars"></i>
+            </label>
+          
+            <ul class="flex " id="navul">
+                <li><a href="./index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="#about" class="hover:text-red-500">About</a></li>
+                <li><a href="#artists" class="hover:text-red-500">Artists</a></li>
+                <li><a href="#schedule" class="hover:text-red-500">Schedule</a></li>
+                <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<body class="bg-sky-950 text-gray-300">
     <!-- About Section -->
-    <section class="container-fuild mx-auto py-12 px-8 md:px-12 lg:px-20">
-        <div class="max-w-7xl  flex flex-col md:flex-row items-stretch">
+    <section id="about-section" class="container mx-auto py-12 px-4 sm:px-7 lg:px-20">
+        <div class="max-w-7xl flex flex-col md:flex-row items-stretch">
             <!-- Text Content -->
-            <div class="md:w-1/2 mb-8 md:mb-0">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
                 <h4 class="text-lg font-bold text-teal-500 mb-4">RHYTHM & HARMONY</h4>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-300 mb-8 mt-9">About Last Night </h2>
-                <p class="text-lg leading-9 mb-10 text-gray-300">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 mt-6">About Last Night</h2>
+                <p class="text-base sm:text-lg leading-7 sm:leading-9 mb-8">
                     Relive the magic and energy of last night's Music Event! The evening was filled with breathtaking
                     performances by legendary artists that left the audiences in awe. Whether it was the soulful tunes
                     or the electrifying beat, the crowd couldn't have enough of it! Check out our post-event recap to
@@ -31,33 +116,35 @@
                 </p>
 
                 <!-- Stats Section -->
-                <div class="flex gap-9">
-                    <div class="text-left">
-                        <h3 class="text-5xl font-bold text-teal-400">15+</h3>
-                        <p class="text-gray-300 text-xl font-bold">Music Artists</p>
+                <div class="flex flex-wrap gap-6 md:gap-9">
+                    <div class="text-left w-1/2 md:w-auto">
+                        <h3 class="text-4xl sm:text-5xl font-bold text-teal-400">15+</h3>
+                        <p class="text-lg sm:text-xl font-bold">Music Artists</p>
                     </div>
-                    <div class="text-left">
-                        <h3 class="text-5xl font-bold text-teal-400">100+</h3>
-                        <p class="text-gray-300 text-xl font-bold">Songs</p>
+                    <div class="text-left w-1/2 md:w-auto">
+                        <h3 class="text-4xl sm:text-5xl font-bold text-teal-400">100+</h3>
+                        <p class="text-lg sm:text-xl font-bold">Songs</p>
                     </div>
-                    <div class="text-left">
-                        <h3 class="text-5xl font-bold text-teal-400">10+</h3>
-                        <p class="text-gray-300 text-xl font-bold">Places</p>
+                    <div class="text-left w-1/2 md:w-auto">
+                        <h3 class="text-4xl sm:text-5xl font-bold text-teal-400">10+</h3>
+                        <p class="text-lg sm:text-xl font-bold">Places</p>
                     </div>
                 </div>
             </div>
+
             <!-- Image Content -->
-            <div class="lg:w-1/2 relative flex justify-end ml-11 mt-16">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Music Event" class=" w-min h-min shadow-lg ">
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Crowd enjoying live music at a vibrant night event" 
+                     class="w-full max-w-sm md:max-w-md lg:max-w-lg shadow-lg" loading="lazy">
             </div>
         </div>
     </section>
 
-
     <hr>
 
 
-    <footer class="bg-primary text-white py-12 px-6">
+    <footer class=" text-white py-12 px-6" style="background-color: #131c34;">
         <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             <!-- Event Information Section -->
             <div>
